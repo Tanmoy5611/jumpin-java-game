@@ -1,1 +1,227 @@
-/* CSS placeholder */
+/* Global Base */
+
+.root {
+    -fx-font-family: "Inter", "SF Pro Display", "Segoe UI", "Arial";
+    -fx-font-smoothing-type: gray;
+}
+
+/* A reusable dark-glass background look */
+.glass {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-background-radius: 22;
+    -fx-border-color: rgba(255,255,255,0.10);
+    -fx-border-radius: 22;
+}
+
+/* Title and labels */
+
+.title-text {
+    -fx-font-size: 34px;
+    -fx-font-weight: 800;
+    -fx-fill: rgba(245,245,245,0.98);
+}
+
+.turn-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #00e676;
+}
+
+/* Different turns */
+.turn-label.ai {
+    -fx-text-fill: #ffb74d;
+}
+
+.turn-label.gameover {
+    -fx-text-fill: #ffd54f;
+}
+
+/* Buttons */
+
+.btn {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+    -fx-background-radius: 18;
+    -fx-padding: 12 28;
+    -fx-cursor: hand;
+}
+
+.btn:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* Primary (orange) */
+.btn-primary {
+    -fx-background-color: linear-gradient(#ff9800, #e65100);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.55), 14, 0, 0, 8);
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(#ffb74d, #ff6f00);
+    -fx-effect: dropshadow(gaussian, rgba(255,152,0,0.35), 22, 0, 0, 0);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* Secondary (dark) */
+.btn-secondary {
+    -fx-background-color: linear-gradient(#3a3a3a, #1f1f1f);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.55), 14, 0, 0, 8);
+    -fx-border-color: rgba(255,255,255,0.10);
+    -fx-border-radius: 18;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: linear-gradient(#4a4a4a, #242424);
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.10), 18, 0, 0, 0);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* End-screen buttons */
+.btn-end {
+    -fx-background-color: linear-gradient(#2f2f2f, #171717);
+    -fx-border-color: rgba(255,255,255,0.15);
+    -fx-border-radius: 18;
+}
+
+.btn-end:hover {
+    -fx-background-color: linear-gradient(#3b3b3b, #1d1d1d);
+    -fx-effect: dropshadow(gaussian, rgba(255,213,79,0.25), 18, 0, 0, 0);
+}
+
+/* Board and panels */
+
+.board-wrapper {
+    -fx-background-color: rgba(0,0,0,0.20);
+    -fx-background-radius: 26;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.85), 36, 0, 0, 12);
+}
+
+.board-surface {
+    -fx-background-color: #5a3e1b;
+    -fx-padding: 22;
+    -fx-background-radius: 22;
+    -fx-border-radius: 22;
+    -fx-border-color: rgba(255,255,255,0.10);
+    -fx-border-width: 1;
+}
+
+/* Move history */
+.history-panel {
+    -fx-background-color: rgba(0,0,0,0.40);
+    -fx-padding: 12;
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(255,255,255,0.10);
+    -fx-border-radius: 16;
+}
+
+.history-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-text-fill: rgba(255,255,255,0.90);
+}
+
+.history-item {
+    -fx-font-size: 12px;
+    -fx-text-fill: rgba(255,255,255,0.85);
+}
+
+/* Tiles */
+
+.tile {
+    -fx-background-color: #deb887;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: rgba(0,0,0,0.65);
+    -fx-border-width: 1.2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 8, 0, 0, 3);
+}
+
+.tile:hover {
+    -fx-background-color: #f2c98c;
+    -fx-border-color: rgba(255,213,79,0.85);
+    -fx-effect: dropshadow(gaussian, rgba(255,213,79,0.35), 14, 0, 0, 0);
+    -fx-translate-y: -3;
+}
+
+.tile:pressed {
+    -fx-translate-y: 0;
+    -fx-scale-x: 0.99;
+    -fx-scale-y: 0.99;
+}
+
+/* Selection glow (apply by adding style class "tile-selected") */
+.tile-selected {
+    -fx-border-color: #04f8e1;
+    -fx-border-width: 3;
+    -fx-effect: dropshadow(gaussian, rgba(4,248,225,0.35), 18, 0, 0, 0);
+}
+
+/* Overlays */
+
+.overlay {
+    -fx-background-color: rgba(0,0,0,0.65);
+}
+
+.overlay-win-text {
+    -fx-font-size: 42px;
+    -fx-font-weight: 900;
+    -fx-fill: #ffd54f;
+    -fx-effect: dropshadow(gaussian, rgba(255,213,79,0.75), 26, 0, 0, 0);
+}
+
+/* Thinking overlay text */
+.overlay-thinking {
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-fill: rgba(255,255,255,0.95);
+}
+
+/*  Table and chart (Stats screen) */
+
+.table-view {
+    -fx-background-color: rgba(0,0,0,0.25);
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-border-color: rgba(255,255,255,0.10);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-background-radius: 14 14 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: rgba(255,255,255,0.88);
+    -fx-font-weight: 800;
+}
+
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(255,255,255,0.85);
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: rgba(255,213,79,0.18);
+}
+
+.chart {
+    -fx-background-color: transparent;
+}
+
+.chart-title {
+    -fx-text-fill: rgba(255,255,255,0.92);
+    -fx-font-weight: 900;
+}
+
+.axis-label {
+    -fx-text-fill: rgba(255,255,255,0.70);
+}
+
+.axis-tick-label {
+    -fx-text-fill: rgba(255,255,255,0.65);
+}

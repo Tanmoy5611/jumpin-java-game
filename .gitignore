@@ -1,2 +1,24 @@
-# Project exclude paths
-/out/
+### IntelliJ IDEA ###
+.idea/
+*.iml
+
+### Compiled files ###
+out/
+target/
+build/
+
+### Logs ###
+*.log
+
+### OS Files ###
+.DS_Store
+Thumbs.db
+
+### Java ###
+*.class
+
+### JavaFX SDK (if downloaded locally inside project) ###
+javafx-sdk/
+
+### Database ###
+*.db
