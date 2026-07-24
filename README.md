@@ -1,6 +1,6 @@
 # Jumpin' Java Game
 
-A JavaFX-based board game application developed as part of the Applied Computer Science program at Karel de Grote University (KdG), Belgium.
+A JavaFX-based board game application.
 
 **Jumpin' Java** is a structured board game implementation featuring AI opponents, statistics tracking, sound integration, and a multi-screen JavaFX interface following a layered MVC-inspired architecture.
 
@@ -140,8 +140,6 @@ This project demonstrates:
 ## Author
 
 **Tanmoy Das**  
-Bachelor of Applied Computer Science (AI)  
-Karel de Grote University - Belgium
 
 ---
 
